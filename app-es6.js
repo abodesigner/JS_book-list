@@ -141,6 +141,12 @@ let book;
 let logic;
 
 form.addEventListener("submit", function (e) {
+
+    // GET VALUES FROM INPUT FIELDS
+    let bookTitle = document.getElementById("title").value;
+    let bookAuthor = document.getElementById("author").value;
+    let bookISBN = document.getElementById("isbn").value;
+
     book = new Book(bookTitle, bookAuthor, bookISBN);
     logic = new Logic();
     logic.validate(book);
